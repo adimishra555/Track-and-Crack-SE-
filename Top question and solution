@@ -31,4 +31,12 @@ class Solution:
                 nums[k]=nums[i]
                 k+=1
         return k
--------   
+-------   Reomve Duplicates from Sorted Array
+class Solution:
+    def removeDuplicates(self, nums: List[int]) -> int:
+        k=set(nums)
+        nums.clear()
+        for i in k:
+            nums.append(i)
+        nums.sort()
+        return len(nums)
